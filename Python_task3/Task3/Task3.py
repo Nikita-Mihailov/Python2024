@@ -18,3 +18,4 @@ def function_name(search: str, status: bool, *args: int, **kwargs: dict) -> list
         return result_2
     else:
         raise ValueError("Error for search")
+
