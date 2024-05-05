@@ -19,7 +19,6 @@ calendar_date = str(input("Введите дату формата «ГГГГ-М�
 
 def show_calendar(calendar_date):
     pattern = re.compile(r'\d{4}-\d{2}')
-
     if pattern.match(calendar_date):
         year, month = map(int, calendar_date.split('-'))
         cal = calendar.monthcalendar(year, month)
@@ -30,13 +29,11 @@ def show_calendar(calendar_date):
 
 
 show_calendar(calendar_date)
-
 phone_number = str(input("Введите российский номер телефона формата '+7-***-***-**-**': "))
 
 
 def phone_number_check(phone_number):
     pattern = r'^(\+7|7|8)-\d{3}-\d{3}-\d{2}-\d{2}$'
-
     if re.match(pattern, phone_number):
         print("Номер телефона {} соответствует формату".format(phone_number))
     else:
